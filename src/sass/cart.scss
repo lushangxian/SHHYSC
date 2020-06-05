@@ -311,166 +311,166 @@ body{
     .td-2{
         width: 325px;
     }
-    .neir2{
-        overflow: hidden;
-        .lie{
-            border-top: 1px solid #f7f7f7;
-            .lie-1{
-                position: relative;
-                height: 90px;
-                padding: 20px 0;
-                line-height: 26px;
-                .info-img{
-                    position: relative;
-                    float: left;
-                    width: 90px;
-                    height: 90px;
-                    img{
-                        width: 100%;
-                    }
-                }
-                h6{
-                    height: 40px;
-                    overflow: hidden;
-                    line-height: 20px;
-                    margin-left: 105px;
-                    font-weight: 500;
-                    font-size: 12px;
-                    a{
-                        color: #666;
-                    }
-                }
-                p{
-                    height: 20px;
-                    line-height: 20px;
-                    margin-left: 105px;
-                    margin-top: 5px;
-                    color: #666;
-                }
-                .td-3{
-                    font-size: 16px;
-                }
-                .td-4{
-                    .ji{
-                        width: 88px;
-                        height: 26px;
-                        line-height: 26px;
-                        margin: 0 auto;
-                        border: 1px solid #dfdfdf;
-                        .jian{
-                            float: left;
-                            width: 20px;
-                            height: 26px;
-                            text-align: center;
-                            font-size: 12px;
-                            color: #ddd;
-                        }
-                        .pt{
-                            float: left;
-                            width: 46px;
-                            height: 20px;
-                            line-height: 20px;
-                            margin-top: 3px;
-                            border-left: 1px solid #dfdfdf;
-                            border-right: 1px solid #dfdfdf;
-                            input{
-                                width: 100%;
-                                border: 0 none;
-                                text-align: center;
-                            }
-                        }
-                        .jia{
-                            float: right;
-                            width: 20px;
-                            height: 26px;
-                            text-align: center;
-                            font-size: 12px;
-                            color: #ddd;
-                        }
-                    }
-                }
-                .td-6{
-                    height: 24px;
-                    line-height: 24px;
-                    font-weight: 700;
-                    color: #0069aa;
-                    font-size:16px;
-                }
-            }
-            .liebiao{
-                overflow: hidden;
-                border-top: 1px solid #e3e3e3;
-                background: #f8f8f8;
-                .L{
-                    position: relative;
-                    float: $left;
-                    padding: 10px 0;
-                    .kong{
-                        position: relative;
-                        width: 30px;
-                        height: 40px;
-                        line-height: 40px;
-                        text-align: center;
-                        float: $left;
-                        padding: 0 10px;
-                    }
-                    .k{
-                        float: $left;
-                        height: 40px;
-                        line-height: 20px;
-                        padding: 0 10px;
-                        em{
-                            display: block;
-                        }
-                    }
-                    .k-1{
-                        a{
-                        color: #0069aa;
-                    }}
-                }
-                .R{
-                    position: relative;
-                    float: right;
-                    height: 60px;
-                    .a1{
-                        float: right;
-                        width: 120px;
-                        height: 60px;
-                        line-height: 60px;
-                        font-size: 18px;
-                        text-align: center;
-                        background: #6cae38;
-                        font-family: "Microsoft Yahei";
-                        color: #fff;
-                    }
-                    .R-1{
-                        position: relative;
-                        float: right;
-                        height: 40px;
-                        padding: 10px 0;
-                        margin-right: 20px;
-                        line-height: 20px;
-                        em{
-                            display: block;
-                        }
-                        span{
-                            margin: 0 5px;
-                            color: #0069aa;
-                            font-size: 14px;
-                            i{
-                                font-style: normal;
-                                font-size: 18px;
-                                font-weight: 700
-                            }
-                        }
-                        .num{
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
+//     .neir2{
+//         overflow: hidden;
+//         .lie{
+//             border-top: 1px solid #f7f7f7;
+//             .lie-1{
+//                 position: relative;
+//                 height: 90px;
+//                 padding: 20px 0;
+//                 line-height: 26px;
+//                 .info-img{
+//                     position: relative;
+//                     float: left;
+//                     width: 90px;
+//                     height: 90px;
+//                     img{
+//                         width: 100%;
+//                     }
+//                 }
+//                 h6{
+//                     height: 40px;
+//                     overflow: hidden;
+//                     line-height: 20px;
+//                     margin-left: 105px;
+//                     font-weight: 500;
+//                     font-size: 12px;
+//                     a{
+//                         color: #666;
+//                     }
+//                 }
+//                 p{
+//                     height: 20px;
+//                     line-height: 20px;
+//                     margin-left: 105px;
+//                     margin-top: 5px;
+//                     color: #666;
+//                 }
+//                 .td-3{
+//                     font-size: 16px;
+//                 }
+//                 .td-4{
+//                     .ji{
+//                         width: 88px;
+//                         height: 26px;
+//                         line-height: 26px;
+//                         margin: 0 auto;
+//                         border: 1px solid #dfdfdf;
+//                         .jian{
+//                             float: left;
+//                             width: 20px;
+//                             height: 26px;
+//                             text-align: center;
+//                             font-size: 12px;
+//                             color: #ddd;
+//                         }
+//                         .pt{
+//                             float: left;
+//                             width: 46px;
+//                             height: 20px;
+//                             line-height: 20px;
+//                             margin-top: 3px;
+//                             border-left: 1px solid #dfdfdf;
+//                             border-right: 1px solid #dfdfdf;
+//                             input{
+//                                 width: 100%;
+//                                 border: 0 none;
+//                                 text-align: center;
+//                             }
+//                         }
+//                         .jia{
+//                             float: right;
+//                             width: 20px;
+//                             height: 26px;
+//                             text-align: center;
+//                             font-size: 12px;
+//                             color: #ddd;
+//                         }
+//                     }
+//                 }
+//                 .td-6{
+//                     height: 24px;
+//                     line-height: 24px;
+//                     font-weight: 700;
+//                     color: #0069aa;
+//                     font-size:16px;
+//                 }
+//             }
+//             .liebiao{
+//                 overflow: hidden;
+//                 border-top: 1px solid #e3e3e3;
+//                 background: #f8f8f8;
+//                 .L{
+//                     position: relative;
+//                     float: $left;
+//                     padding: 10px 0;
+//                     .kong{
+//                         position: relative;
+//                         width: 30px;
+//                         height: 40px;
+//                         line-height: 40px;
+//                         text-align: center;
+//                         float: $left;
+//                         padding: 0 10px;
+//                     }
+//                     .k{
+//                         float: $left;
+//                         height: 40px;
+//                         line-height: 20px;
+//                         padding: 0 10px;
+//                         em{
+//                             display: block;
+//                         }
+//                     }
+//                     .k-1{
+//                         a{
+//                         color: #0069aa;
+//                     }}
+//                 }
+//                 .R{
+//                     position: relative;
+//                     float: right;
+//                     height: 60px;
+//                     .a1{
+//                         float: right;
+//                         width: 120px;
+//                         height: 60px;
+//                         line-height: 60px;
+//                         font-size: 18px;
+//                         text-align: center;
+//                         background: #6cae38;
+//                         font-family: "Microsoft Yahei";
+//                         color: #fff;
+//                     }
+//                     .R-1{
+//                         position: relative;
+//                         float: right;
+//                         height: 40px;
+//                         padding: 10px 0;
+//                         margin-right: 20px;
+//                         line-height: 20px;
+//                         em{
+//                             display: block;
+//                         }
+//                         span{
+//                             margin: 0 5px;
+//                             color: #0069aa;
+//                             font-size: 14px;
+//                             i{
+//                                 font-style: normal;
+//                                 font-size: 18px;
+//                                 font-weight: 700
+//                             }
+//                         }
+//                         .num{
+//                             text-decoration: none;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 }
-}
-}
+}}
