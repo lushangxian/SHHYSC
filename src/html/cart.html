@@ -1,11 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>购物车</title>
+    <link rel="stylesheet" href="../css/cart.css">
 </head>
+
 <body>
-    
+    <div class="header">
+        <!-------第一块-------->
+        <div class="box">
+            <!----版心----->
+            <div class="banxin">
+                <div class="left-1" style="display: inline;">晚上好，山姆欢迎您!<a href="login.html"
+                        style="padding-left: 10px;">登录</a>
+                    <i>|</i>
+                    <a href="registr.html">注册</a>
+                </div>
+                <div class="right-1">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">我的山姆<i class="iconfont updata">&#xe62c;</i></a><span
+                                class="line"></span>
+                        </li>
+                        <li> <a href="javascript:;">帮助中心<i class="iconfont updata">&#xe62c;</i></a><span
+                                class="line"></span>
+                        </li>
+                        <li> <a href="javascript:;">快购工具<i class="iconfont updata">&#xe62c;</i></a><span
+                                class="line"></span>
+                        </li>
+                        <li> <a href="javascript:;">会籍介绍</a><span class="line"></span>
+                        </li>
+                        <li> <a href="javascript:;">掌上山姆<i class="iconfont updata">&#xe62c;</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--第二块-->
+        <div class="two">
+            <div class="banxin">
+                <div class="logo f1">
+                    <a href=""><img src="./../img/1.png" alt="" style="width: 233px;height: 67px;"></a>
+                </div>
+                <div class="dizhi f1">
+                    <i class="iconfont location">&#xe604;</i>
+                    <span>
+                        <em>深圳市</em>
+                        <span>福田区农林路69号印力中心</span>
+                    </span>
+                </div>
+                <div class="xiu f1">
+                    <div class="xiu-1">
+                        <span>修改地址</span>
+                    </div>
+                </div>
+                <div class="xiu-3 f1">
+                    <span class="f1">山姆头条<em>1/1</em></span>
+                    <p class="f1">银联云闪付最高62折</p>
+                </div>
+                <div class="put f2">
+                    <div class="put-1 f1">
+                        <input type="text"><i class="iconfont fada">&#xe601;</i>
+                    </div>
+                    <div class="put-2 f1">
+                        <div class="put-3">
+                            <a href="">
+                                <span class="iconfont gw" style="
+                                font-size: 34px;">&#xe600;</span>
+                                <span class="shuzi">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第三块-->
+        <div class="three">
+            <div class="banxin">
+                <ul>
+                    <li><a href="">极速达</a></li>
+                    <li><a href="">肉蛋果蔬</a></li>
+                    <li><a href="">熟食冻品</a></li>
+                    <li><a href="">粮食调味</a></li>
+                    <li><a href="">零食乳品</a></li>
+                    <li><a href="">母婴玩具</a></li>
+                    <li><a href="">全球购</a></li>
+                    <li><a href="">酒水饮料</a></li>
+                    <li><a href="">家居纸品</a></li>
+                    <li><a href="">个护护肤</a></li>
+                    <li><a href="">智能家电</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="gwc">
+        <div class="gwc-1">
+            <div class="tou">
+                <h2>我的购物车</h2>
+            </div>
+            <div class="title-1">
+                <div class="content">
+                    <h3>
+                        普通商品
+                    </h3>
+                </div>
+                <!--标题-->
+                <div class="neir">
+                    <span class="td td-1">
+                        <input type="checkbox">
+                    </span>
+                    <span class="td td-2">商品信息</span>
+                    <span class="td td-3">单价（元）</span>
+                    <span class="td td-4">数量</span>
+                    <span class="td td-5">重量（含包装）</span>
+                    <span class="td td-6">小计（元）</span>
+                    <span class="td td-7">操作</span>
+                </div>
+                <!--渲染内容-->
+                <div class="neir2">
+                    <div class="lie">
+                        <div class="lie-1">
+                            <div class="td td-1">
+                                <input type="checkbox">
+                            </div>
+                            <div class="td td-2" style="text-align: left;">
+                                <a href="" class="info-img">
+                                    <img src="../img/11.jpg">
+                                    <div class="kong"></div>
+                                </a>
+                                <h6><a href="">佳沛 新西兰进口 绿果大颗奇异果 3kg</a></h6>
+                                <p class="info">
+                                </p>
+                                <p class="info" style="margin-top:auto;">
+                                    支持极速达&nbsp;&nbsp;
+                                </p>
+                            </div>
+                            <div class="td td-3">116.00</div>
+                            <div class="td td-4">
+                                <div class="ji">
+                                <a class="jian iconfont">&#xe631;</a>
+                                <div class="pt">
+                                    <input type="text" value="1">
+                                </div>
+                                <a class="jia iconfont">&#xe630;</a>
+                            </div>
+                            </div>
+                            <div class="td td-5">3kg</div>
+                            <div class="td td-6"><span>¥</span>116.00</div>
+                            <div class="td td-7"><a href="#">删除</a> </div>
+                        </div>
+                        <div class="liebiao">
+                            <div class="L">
+                                    <!--总和控件-->
+                                    <div class="kong"></div>
+                                    <div class="k k-1"><a href="javascript:;">批量删除</a></div>
+                                    <div class="k">
+                                        <p><em>合计重量</em><span>3kg</span></p>
+                                    </div>
+                                    <div class="k">
+                                        <p><em>预计运费</em><span>￥1</span></p>
+                                    </div>
+                                    <div class="k">
+                                        <p><em>商品金额</em><span>￥116</span></p>
+                                    </div>
+                                    <div class="k">
+                                        <p><em>优惠金额</em><span>-￥0</span></p>
+                                    </div>
+                            </div>
+                            <div class="R">
+                                <!--累加总和-->
+                                <a href="javascript:;" class="a1">去结算</a>
+                                <div class="R-1">
+                                    <em>合计</em>
+                                    <span>￥<i>117.00</i></span>(<u class="num">1</u>件)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
