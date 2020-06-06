@@ -7,6 +7,7 @@
     <title>登录</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
     <div class="header">
         <div class="top">
@@ -20,16 +21,25 @@
         <div class="put">
             <h4>已开通山姆网购账户，请登录</h4>
             <div class="put-1">
-                <p><input type="text" placeholder="您的手机号" class="ipt"></p>
-                <p style="height: 38px"><input type="password" placeholder="验证码" class="ipt" style="width: 290px;float: left;"><span class="s1"></span></p>
-                <div class="put-2">
-                    <input type="checkbox" class="c1"><label><a class="a1">《山姆会籍使用条款》</a>和<a class="a1">《隐私政策》</a></label>
-                </div>
-                <a href="#" class="a2">登录</a>
-                <a href="#" class="a3"></a>
+                <form action="http://127.0.0.1/JS2002/SMHYSC/php/login.php" method="post">
+                    <p><input type="text" placeholder="您的手机号" class="ipt shoujihao"></p>
+                    <p style="height: 38px">
+                        <input type="password" placeholder="验证码" class="ipt yanzhengma"
+                            style="width: 290px;float: left;"><span class="s1"></span></p>
+                    <div class="put-2">
+                        <input type="checkbox" class="c1"><label><a class="a1">《山姆会籍使用条款》</a>和<a
+                                class="a1">《隐私政策》</a></label>
+                    </div>
+                    <a href="#" class="a2 btn">
+                        <input type="submit" name="" id="" value="登录">
+                    </a>
+                    <a href="#" class="a3"></a>
+                </form>
             </div>
         </div>
     </div>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>

@@ -54,10 +54,6 @@ body{
 .f2{
     float: $right;
 }
-.updata{
-    vertical-align: top;
-    padding-left: 1px;
-}
 .location{
     font-size: 12px;
     margin: 0 5px;
@@ -115,6 +111,9 @@ body{
         float: $left;
         a{
             color: $white;
+                &:hover{
+                    text-decoration: underline;
+                }
         }
         i{
             padding: 0 2px;
@@ -126,15 +125,36 @@ body{
             li{
                 float: left;
                 height: 24px;
-    line-height: 24px;
-    border: 1px solid #0069aa;
-    margin-top: 4px;
-    position: relative;
+                line-height: 24px;
+                border: 1px solid #0069aa;
+                margin-top: 4px;
+                position: relative;
+                &:hover{
+                    border: 1px solid #015789;
+                    background-color: #015c92;
+                    color: #fff;
+                }
+                &:hover .erji{
+                    display: block;
+                }
+                &:hover .updata{
+                    transform: rotate(180deg);
+                }
                 a{
                     display: block;
-                    width: 65px;
+                    width: 66px;
                     padding: 0 10px;
                     color: #a5c7db;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #fff;
+                    }
+                    .updata{
+                        display: block;
+                        float: $right;
+                        padding: 1px;
+                        transition: all .3s linear;
+                    }
                 }
                 .line{
                     width: 1px;
@@ -151,6 +171,7 @@ body{
                     z-index: 1300;
                     position: absolute;
                     left: -4px;
+                    animation: flyout-slide-bottom .3s ease forwards;
                     .sanjiao{
                         width: 0;
                         height: 0;
@@ -308,6 +329,16 @@ body{
             font-size: 14px;
             padding: 0 2%;
             cursor: pointer;
+            &:hover{
+                background: #f1f1f1;
+                
+            }
+            &:hover .yinz{
+                display: block;
+            }
+            &:hover a{
+                color: #004b8d ;
+            }
             a{
                 display: block;
                 color: #fff;
@@ -319,7 +350,7 @@ body{
                 display: none;
                 z-index: 1000;
                 position: absolute;
-                left: 0;
+                left: -4px;
                 max-height: 410px;
                 overflow: hidden;
                 padding: 0 0 20px 20px;
