@@ -292,7 +292,12 @@ body{
         position: relative;
         overflow: hidden;
         float: $right;
-        border: 1px solid red;
+        .spic{
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
     }
     .list{
         position: relative;
@@ -300,7 +305,23 @@ body{
         width: 65px;
         height: 466px;
         margin-right: 13px;
-        border: 1px solid red;
+        ul{
+            height: 380px;
+            width: 65px;
+            top: 0px;
+            left: 0px;
+            li{
+                width: 63px;
+                height: 63px;
+                overflow: hidden;
+                border: 1px solid #eee;
+                cursor: pointer;
+                margin-bottom: 10px;
+                img{
+                    margin: -1px 0 0 -1px;
+                }
+            }
+        }
     }
 }
 .ringt{

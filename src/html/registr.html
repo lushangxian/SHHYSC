@@ -34,25 +34,25 @@
             <div class="put">
                 <form action="http://localhost/JS2002/SMHYSC/php/registry.php" method="post" class="form1">
                     <div class="p1">
-                        <input type="text" placeholder="用户名" class="ipt username" name="username"><span></span>
+                        <input type="text" placeholder="用户名" class="username ipt" id="username" name="username"><span></span>
                         <p>4-20位字符，可由中文、英文、数字</p>
                     </div>
                     <div class="p1">
-                        <input type="text" placeholder="邮箱地址" class="ipt email" name="email"><span></span>
+                        <input type="text" placeholder="邮箱地址" class="email ipt" id="email" name="email"><span></span>
                         <p>4-请输入常用邮箱，可用作登录账户，接受订单通知和找回密码之用</p>
                     </div>
                     <div class="p1">
-                        <input type="password" placeholder="设置密码" class="ipt password" name="password"><span></span>
+                        <input type="password" placeholder="设置密码" class="password ipt" id="password" name="password"><span></span>
                         <p>4-6-20位字符，可由大小写英文、数字或符号“-”“_”组成</p>
                     </div>
                     <div class="p1">
-                        <input type="password" placeholder="确认密码" class="ipt repass" name="repass"><span></span>
+                        <input type="password" placeholder="确认密码" class="repass ipt" id="repass" name="repass"><span></span>
                         <p>4-20位字符，可由中文、英文、数字</p>
                     </div>
-                    <div class="p1"><input type="text" placeholder="您的手机号" class="ipt shoujihao"
+                    <div class="p1"><input type="text" placeholder="您的手机号" class="shoujihao ipt" id="shoujihao"
                             name="shoujihao"><span></span>
                     </div>
-                    <div class="p1" style="height: 38px;"><input type="text" placeholder="验证码" class="ipt yanzhengma"
+                    <div class="p1" style="height: 38px;"><input type="text" placeholder="验证码" class="yanzhengma ipt" id="yanzhegma" 
                             name="yanzhengma" style="width: 290px;float: left;"><span class="s1"></span></div>
                     <div class="sp">
                         <input type="checkbox"><label for="#">&nbsp;订阅优惠信息</label>
@@ -62,8 +62,8 @@
                     </div>
                     <div class="btn">
                         <a href="">
-                        <input type="submit" name="submit" id="" value="提交">
-                    </a>
+                            <input type="submit" name="submit" id="" value="提交">
+                        </a>
                     </div>
                 </form>
             </div>
@@ -74,45 +74,48 @@
     <script>
         !function () {
             let shoujihao = document.querySelector('.shoujihao');
-            //console.log(name);
+            let span = document.querySelectorAll('span')[5];
+            let form1 = document.querySelector('.form1');
+            //console.log(span[5]);
             let sjh = true;
             shoujihao.onblur = function () {
-                if (this.value !== '') {
+                if (this.value != '') {
                     $ajax({
                         type: 'post',
                         url: 'http://localhost/JS2002/SMHYSC/php/registry.php',
                         data: {
-                            sjh: shoujihao.value//将数据传给后端
+                            shoujihao: shoujihao.value//将数据传给后端
                         },
                         success: function (data) {//后端反值 1存在 空为不存在
-                            let reg = /^1[3578]\d{9}$/;
-                            if (reg.test(data)) {
-                                Span[5].innerHTML = '手机号已存在';
-                                Span[5].style.color = 'red';
+                            //let reg = /^1[3578]\d{9}$/;
+                            if (data) {
+                                console.log(data);
+                                span.innerHTML = '手机号已存在';
+                                span.style.color = 'red';
                                 sjh = false;
                             } else {
-                                Span[5].innerHTML = '√';
-                                Span[5].style.color = 'grenn';
+                                span.innerHTML = '√';
+                                span.style.color = 'grenn';
                                 sjh = true;
                             }
                         }
                     });
                 } else {
-                    Span[5].innerHTML = '请输入手机号';
-                    Span[5].style.color = 'red';
-                }
-                form1.onsubmit = function () {
-                    //判断用户名是否为空。
-                    if (shoujihao.value === '') {
-                        alert('请输入用户名');
-                        sjh = false;
-                    }
-                    if (!sjh) {//阻止的核心就是userlock为false
-                        return false;
-                    }
+                    alert('输入用户名');
                 }
             }
-        }
+            //console.log(form1);
+            form1.onsubmit = function () {
+                //判断用户名是否为空。
+                if (shoujihao.value === '') {
+                    alert('请输入用户名');
+                    sjh = false;
+                }
+                if (!sjh) {
+                    return false;
+                }
+            }
+        }();
     </script>
 </body>
 

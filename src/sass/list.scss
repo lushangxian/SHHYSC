@@ -442,181 +442,185 @@ body{
         }
     }
     .cont{
-        overflow: hidden;
         .cont-1{
-            overflow: hidden;
             margin-right: -20px;
             .sp{
-                float: $left;
                 width: 240px;
-                height: 340px;
-                border: 1px solid red;}
-        //         width: 240px;
-        //         margin-right: 20px;
-        //         float: left;
-        //         height: 364px;
-        //         margin-bottom: 30px;
-        //         margin-right: 20px;
-        //         position: relative;
-        //         z-index: 1;
-        //         .sp1{
-        //             position: relative;
-        //             margin-bottom: 14px;
-        //             a{
-        //                 img{
-        //                    // position: absolute;
-        //                     top: 0;
-        //                     left: 0;
-        //                     //width: 100%;
-        //                 }
-        //             }
-        //             .yuan{
-        //                 position: absolute;
-        //                 left: 10px;
-        //                 bottom: -8px;
-        //                 width: 50px;
-        //                 height: 50px;
-        //                 text-align: center;
-        //                 border-radius: 50px;
-        //                 color: #fff;
-        //                 display: table;
-        //                 img{
-        //                     border-radius: 50%;
-        //                     position: absolute;
-        //                     top: 0;
-        //                     left: 0;
-        //                     width: 100%;
-        //                 } 
-        //             }
-        //         }
-        //         .p1{
-        //             box-sizing: border-box;
-        //             width: 100%;
-        //             padding-left: 60px;
-        //             overflow: hidden;
-        //             text-overflow: ellipsis;
-        //             white-space: nowrap;
-        //             position: relative;
-        //             height: 22px;
-        //             line-height: 22px;
-        //             margin-bottom: 4px;
-        //             text-align: left;
-        //             em{
-        //                 position: absolute;
-        //                 left: 0;
-        //                 //top: 0;
-        //                 width: 56px;
-        //                 height: 22px;
-        //                 background: url(../img/2.png);
-        //             }
-        //         }
-        //         .p2{
-        //             height: 16px;
-        //             line-height: 16px;
-        //             color: #999;
-        //             width: 100%;
-        //             overflow: hidden;
-        //             text-overflow: ellipsis;
-        //             white-space: nowrap;
-        //             margin-bottom: 12px;
-        //         }
-        //         .p3{
-        //             height: 20px;
-        //             line-height: 20px;
-        //             margin-bottom: 11px;
-        //             em{
-        //                 color: #0069aa;
-        //                 font-size: 18px;
-        //                 font-weight: bold;
-        //                 b{
-        //                     font-size: 12px;
-        //                 }
-        //             }
-        //         }
-        //         .shopp{
-        //             overflow: hidden;
-        //             height: 30px;
-        //             ul{
-        //                 overflow: hidden;
-        //                 border: 1px solid #dfdfdf;
-        //                 height: 26px;
-        //                 border-radius: 2px;
-        //                 float: $left;
-        //                 width: 108px;
-        //                 margin-right: 10px;
-        //                 li{
-        //                     width: 26px;
-        //                     text-align: center;
-        //                     line-height: 24px;
-        //                     font-size: 16px;
-        //                     cursor: pointer;
-        //                     color: #0069aa;
-        //                     height: 26px;
-        //                     float: left
-        //                 }
-        //                 .jian{
-        //                         width: 26px;
-        //                         text-align: center;
-        //                         line-height: 24px;
-        //                         font-size: 16px;
-        //                         cursor: pointer;
-        //                         color: #0069aa;
-        //                         height: 26px;
-        //                         float: $left;
-        //                 }
-        //                 .m{
-        //                     margin-top: 3px;
-        //                     width: 54px;
-        //                     border: solid #dfdfdf;
-        //                     border-width: 0 1px;
-        //                     height: 20px;
-        //                     line-height: 20px;
-        //                     font-size: 12px;
-        //                     cursor: text;
-        //                     .int{
-        //                         width: 30px;
-        //                         outline: 0;
-        //                         border: 0;
-        //                         box-shadow: none;
-        //                         color: #0069aa;
-        //                         text-align: center;
-        //                         -webkit-appearance: none;
-        //                     }
-        //                     .jia{
-        //                         width: 26px;
-        //                         text-align: center;
-        //                         line-height: 24px;
-        //                         font-size: 16px;
-        //                         cursor: pointer;
-        //                         color: #0069aa;
-        //                         height: 26px;
-        //                         float: left;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //         .shopCar{
-        //             width: 118px;
-        //             color: #0069aa;
-        //             line-height: 26px;
-        //             text-align: center;
-        //             overflow: hidden;
-        //             position: relative;
-        //             background-color: #fff;
-        //             border: 1px solid #dfdfdf;
-        //             height: 26px;
-        //             border-radius: 2px;
-        //             float: left;
-        //             i{
-        //                 font-size: 14px;
-        //                 margin-right: 8px;
-        //             }
-        //         }
-        //     }
-        // }
+                margin-right: 20px;
+                float: $left;
+                height: 364px;
+                margin-bottom: 30px;
+                margin-right: 20px;
+                position: relative;
+                &:hover{
+                    z-index: 15;
+                }
+                &:hover .xiaog{
+                    opacity: 1;
+                    transition: opacity .2s ease-in .1s;
+                }
+                .sp1{
+                    position: relative;
+                    margin-bottom: 14px;
+                    .yuan{
+                        position: absolute;
+                        left: 10px;
+                        bottom: -8px;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        border-radius: 50px;
+                        color: #fff;
+                        display: table;
+                        img{
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                        } 
+                    }
+                }
+                .p1{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding-left: 60px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    position: relative;
+                    height: 22px;
+                    line-height: 22px;
+                    margin-bottom: 4px;
+                    text-align: left;
+                    em{
+                        position: absolute;
+                        left: 0;
+                        //top: 0;
+                        width: 56px;
+                        height: 22px;
+                        background: url(../img/2.png);
+                    }
+                }
+                .p2{
+                    height: 16px;
+                    line-height: 16px;
+                    color: #999;
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-bottom: 12px;
+                }
+                .p3{
+                    height: 20px;
+                    line-height: 20px;
+                    margin-bottom: 11px;
+                    em{
+                        color: #0069aa;
+                        font-size: 18px;
+                        font-weight: bold;
+                        b{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .shopp{
+                    overflow: hidden;
+                    height: 30px;
+                    ul{
+                        overflow: hidden;
+                        border: 1px solid #dfdfdf;
+                        height: 26px;
+                        border-radius: 2px;
+                        float: $left;
+                        width: 108px;
+                        margin-right: 10px;
+                        li{
+                            width: 26px;
+                            text-align: center;
+                            line-height: 24px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            color: #0069aa;
+                            height: 26px;
+                            float: left
+                        }
+                        .jian{
+                                width: 26px;
+                                text-align: center;
+                                line-height: 24px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                color: #0069aa;
+                                height: 26px;
+                                float: $left;
+                        }
+                        .m{
+                            margin-top: 3px;
+                            width: 54px;
+                            border: solid #dfdfdf;
+                            border-width: 0 1px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 12px;
+                            cursor: text;
+                            .int{
+                                width: 30px;
+                                outline: 0;
+                                border: 0;
+                                box-shadow: none;
+                                color: #0069aa;
+                                text-align: center;
+                                -webkit-appearance: none;
+                            }
+                            .jia{
+                                width: 26px;
+                                text-align: center;
+                                line-height: 24px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                color: #0069aa;
+                                height: 26px;
+                                float: left;
+                            }
+                        }
+                    }
+                    .shopCar{
+                        width: 118px;
+                        color: #0069aa;
+                        line-height: 26px;
+                        text-align: center;
+                        overflow: hidden;
+                        position: relative;
+                        background-color: #fff;
+                        border: 1px solid #dfdfdf;
+                        height: 26px;
+                        border-radius: 2px;
+                        float: left;
+                        i{
+                            font-size: 14px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+                .xiaog{
+                    position: absolute;
+                    opacity: 0;
+                    z-index: -1;
+                    background-color: #fff;
+                    padding: 15px 20px;
+                    top: -15px;
+                    left: -20px;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0 0 6px 2px rgba(0,0,0,0.15);
+                }
+            }
+        }
     }
 }
-}
+
 .dibu{
     margin-top: 60px;
     background-color: #ebebeb;

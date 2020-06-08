@@ -1,7 +1,7 @@
 <?php
 include "conn.php";
 
-$pagesize = 10; //单个页面展示的数据条数
+$pagesize = 14; //单个页面展示的数据条数
 
 $sql = "select * from shanmuhuiyuan"; //获取所有的数据
 $result = $conn->query($sql); //获取数据的结果集(记录集)
@@ -28,7 +28,7 @@ $page = ($pagevalue - 1) * $pagesize;
 //limit 10,10  从偏移量5开始 取10条
 //limit 20,10 从偏移量14开始 取10条
 
-$sql1 = "select * from shanmuhuiyuan limit $page,$pagesize";
+$sql1 = "select * from shanmu1 limit $page,$pagesize";
 $res = $conn->query($sql1);
 
 
