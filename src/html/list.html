@@ -124,7 +124,7 @@
                         <h2><span>极速达</span></h2>
                         <!--第二层-->
                         <dl>
-                            <dt>
+                            <dt class="dt" index='0'  >
                                 <a href="javascript:;" class="d1">
                                     <span class="icon"></span>
                                 </a>
@@ -133,7 +133,7 @@
                                     <span class="s2">36</span>
                                 </a>
                             </dt>
-                            <dd>
+                            <dd class="dd">
                                 <ul>
                                     <a href="javascript:;">
                                         <li><span class="s1">时令水果</span><span class="s2">17</span></li>
@@ -148,7 +148,7 @@
                             </dd>
                         </dl>
                         <dl>
-                            <dt>
+                            <dt class="dt" index='1' >
                                 <a href="javascript:;" class="d1">
                                     <span class="icon"></span>
                                 </a>
@@ -157,7 +157,7 @@
                                     <span class="s2">93</span>
                                 </a>
                             </dt>
-                            <dd>
+                            <dd class="dd">
                                 <ul>
                                     <a href="javascript:;">
                                         <li><span class="s1">虾/贝类/海参</span><span class="s2">15</span></li>
@@ -172,7 +172,7 @@
                             </dd>
                         </dl>
                         <dl>
-                            <dt>
+                            <dt class="dt" index='2' >
                                 <a href="javascript:;" class="d1">
                                     <span class="icon"></span>
                                 </a>
@@ -181,7 +181,7 @@
                                     <span class="s2">81</span>
                                 </a>
                             </dt>
-                            <dd>
+                            <dd class="dd">
                                 <ul>
                                     <a href="javascript:;">
                                         <li><span class="s1">叶菜</span><span class="s2">12</span></li>
@@ -239,10 +239,9 @@
                     <!--排序功能-->
                     <div class="paixu">
                         <div class="paixu-1">
-                            <a href="javascript:;" class="ac">默认</a>
-                            <a href="javascript:;">销量</a>
-                            <a href="javascript:;">最新</a>
-                            <a href="javascript:;">优惠<i class="iconfont">&#xe626;</i></a>
+                            <button><a href="javascript:;" class="ac">默认</a></button>
+                            <button><a href="javascript:;">销量</a></button>
+                            <button><a href="javascript:;">优惠<i class="iconfont">&#xe626;</i></a></button>
                             <a href="javascript:;">极速达<i class="iconfont">&#xe626;</i></a>
                             <a href="javascript:;">全球购<i class="iconfont">&#xe626;</i></a>
                         </div>
@@ -255,6 +254,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="pagelist">
+        <div class="m-style page">
         </div>
     </div>
     <!---------------尾部------------------>
@@ -342,7 +345,8 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="../../thirdplugins/jquery.pagination.js"></script>
     <script src="../../thirdplugins/jquery.lazyload.js"></script>
     <script src="../js/ajax.js"></script>
     <script src="../js/list.js"></script>

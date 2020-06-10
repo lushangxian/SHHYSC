@@ -281,49 +281,84 @@ body{
 }
 .shop{
     width: 598px;
-    position: relative;
     float: $left;
     box-sizing: border-box;
     z-index: 100;
-    .box1{
+    #box1{
         margin-right: 15px;
         width: 500px;
         height: 500px;
         position: relative;
-        overflow: hidden;
         float: $right;
-        .spic{
+        #spic{
+            height: 500px;
+            width: 500px;
             overflow: hidden;
+            border: 1px solid rebeccapurple;
             img{
                 width: 100%;
+                height: 500px;
+            }
+            #sf{
+                left: 0;
+                top: 0;
+                display: none;
+                position: absolute;
+                width: 180px;
+                height: 150px;
+                background-color: #000;
+                opacity: .3;
+                z-index: 3;
+                cursor: move;
+            }
+        }
+        #df{
+            z-index: 10;
+            display: none;
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            left: 520px;
+            top: 0;
+            border: 1px solid red;
+        }
+        #datu{
+                width: 800px;
+                height: 800px;
+                position: absolute;
+                left: 0;
+                top: 0;
             }
         }
     }
-    .list{
-        position: relative;
-        float: left;
-        width: 65px;
-        height: 466px;
-        margin-right: 13px;
-        ul{
-            height: 380px;
+    #list{
+        img{
             width: 65px;
-            top: 0px;
-            left: 0px;
-            li{
-                width: 63px;
-                height: 63px;
-                overflow: hidden;
-                border: 1px solid #eee;
-                cursor: pointer;
-                margin-bottom: 10px;
-                img{
-                    margin: -1px 0 0 -1px;
-                }
-            }
         }
+        // position: relative;
+        // float: left;
+        // width: 65px;
+        // height: 466px;
+        // margin-right: 13px;
+        // ul{
+        //     height: 380px;
+        //     width: 65px;
+        //     top: 0px;
+        //     left: 0px;
+        //     li{
+        //         width: 63px;
+        //         height: 63px;
+        //         overflow: hidden;
+        //         border: 1px solid #eee;
+        //         cursor: pointer;
+        //         margin-bottom: 10px;
+        //         img{
+        //             margin: -1px 0 0 -1px;
+        //         }
+        //     }
+        // }
     }
-}
 .ringt{
     float: right;
     padding-left: 10px;
