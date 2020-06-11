@@ -4,7 +4,7 @@ let con1 = document.querySelectorAll('.con')[1];
 let con2 = document.querySelectorAll('.con')[2];
 console.log(con1);
 $ajax({
-    url: 'http://localhost/JS2002/SMHYSC/php/index.php',
+    url: 'http://localhost/JS2002/SMHYSC/php/index1.php',
     success: function (data) {
         console.log(JSON.parse(data))
         let arrdata = JSON.parse(data);//解析字符串

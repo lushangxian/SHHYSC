@@ -20,6 +20,7 @@ $ajax({
     success: function (data) {
         let arrdata = JSON.parse(data);
         Datu.src = arrdata.url;
+        Datu.sid=arrdata.sid;
         Datu1.src = arrdata.url;
         da.innerHTML = arrdata.title;
         xiao.innerHTML = arrdata.title2;
@@ -29,10 +30,8 @@ $ajax({
         let str = '';
         console.log(str);
         for (let i = 0; i < url2.length; i++) {//循环渲染数据
-            str += `
-                
-                    <img src="${url2[i]}">
-                 
+            str += `           
+                    <img src="${url2[i]}">         
             `;
         }
         str += '';
@@ -55,7 +54,7 @@ function Scale() {
     this.listimg=this.list.children;
     console.log(this.listimg)//大盒子
 }
-
+//公式：大图/小图=大放/小放
 Scale.prototype.init = function () {
     //1.鼠标经过小图，显示小放和大放
     this.scale.onmouseover = () => {
@@ -75,8 +74,8 @@ Scale.prototype.init = function () {
         //3.小图添加鼠标移动事件
         this.spic.onmousemove = (ev) => {
             var ev = ev || window.event;
-            let l = ev.clientX - this.scale.offsetLeft - this.sf.offsetWidth / 2;
-            let t = ev.clientY - this.scale.offsetTop - this.sf.offsetHeight / 2;
+            let l = ev.pageX - this.scale.offsetLeft - this.sf.offsetWidth / 2;
+            let t = ev.pageY - this.scale.offsetTop - this.sf.offsetHeight / 2;
             if (l < 0) {
                 l = 0
             } else if (l >= this.spic.offsetWidth - this.sf.offsetWidth) {
@@ -87,8 +86,6 @@ Scale.prototype.init = function () {
             } else if (t >= this.spic.offsetHeight - this.sf.offsetHeight) {
                 t = this.spic.offsetHeight - this.sf.offsetHeight - 2;
             }
-
-
             this.sf.style.left = l + 'px';
             this.sf.style.top = t + 'px';
             this.bpic.style.left = -l * this.bili + 'px';
@@ -97,7 +94,7 @@ Scale.prototype.init = function () {
          // 5 点击小图 切换图片
          for(let i=0;i<this.listimg.length;i++){
             this.listimg[i].onmousemove=()=>{
-                //console.log(this.listimg[i])
+                //console.log(this.listimg[i].src)
                 this.bpic.src=this.listimg[i].src;
                 this.spicimg.src=this.listimg[i].src;
             }
@@ -111,3 +108,44 @@ Scale.prototype.init = function () {
 }
 
 new Scale().init();
+
+//商品进入购物车
+//cookie存储
+
+let arrsid=[];//商品id
+let arrnum=[];//商品数量
+
+//先获取cookie才能进行点击次数的判断(第一次，还是第一次之后)
+//提前约定cookie键值(cookiesid/cookienum)
+//用cookie封装函数 取出数据 变成数组
+function cookievalue(){
+    if(cookie.get('cookiesid') && cookie.get('cookienum')){
+        arrsid=cookie.get('cookiesid').split(',');//获取的cookie变成数组
+        arrnum=cookie.get('cookienum').split(',');//
+    }else{
+        arrnum=[];
+        arrsid=[];
+    }
+}
+console.log(cookievalue());
+//通过点击判断是否第一次加入购物车
+btn.onclick=function(){
+    //获取当前商品id
+    cookievalue();
+    if(arrsid.indexOf(id) !== -1){//存在 不是第一次
+        let num=parseInt(arrnum[arrsid.indexOf(id)])+parseInt(value.value);
+        arrnum[arrsid.indexOf(id)]=num;
+        cookie.set('cookienum',arrnum,10);
+        console.log(value.value)
+    }else{//第一次添加
+        arrsid.push(id);
+        let num=parseInt(value.value);
+        arrnum.push(num);
+        cookie.set('cookiesid',arrsid,10);
+        cookie.set('cookienum',arrnum,10);
+        console.log(num)
+    }
+    console.log(arrsid);
+    console.log(arrnum);
+    alert('商品已加入购物车')
+}
