@@ -34,7 +34,8 @@
             <div class="put">
                 <form action="http://localhost/JS2002/SMHYSC/php/registry.php" method="post" class="form1">
                     <div class="p1">
-                        <input type="text" placeholder="用户名" class="username ipt" id="username" name="username"><span></span>
+                        <input type="text" placeholder="用户名" class="username ipt" id="username"
+                            name="username"><span></span>
                         <p>4-20位字符，可由中文、英文、数字</p>
                     </div>
                     <div class="p1">
@@ -42,18 +43,22 @@
                         <p>4-请输入常用邮箱，可用作登录账户，接受订单通知和找回密码之用</p>
                     </div>
                     <div class="p1">
-                        <input type="password" placeholder="设置密码" class="password ipt" id="password" name="password"><span></span>
+                        <input type="password" placeholder="设置密码" class="password ipt" id="password"
+                            name="password"><span></span>
                         <p>4-6-20位字符，可由大小写英文、数字或符号“-”“_”组成</p>
                     </div>
                     <div class="p1">
-                        <input type="password" placeholder="确认密码" class="repass ipt" id="repass" name="repass"><span></span>
+                        <input type="password" placeholder="确认密码" class="repass ipt" id="repass"
+                            name="repass"><span></span>
                         <p>4-20位字符，可由中文、英文、数字</p>
                     </div>
                     <div class="p1"><input type="text" placeholder="您的手机号" class="shoujihao ipt" id="shoujihao"
                             name="shoujihao"><span></span>
                     </div>
-                    <div class="p1" style="height: 38px;"><input type="text" placeholder="验证码" class="yanzhengma ipt" id="yanzhegma" 
-                            name="yanzhengma" style="width: 290px;float: left;"><span class="s1"></span></div>
+                    <div class="p1" style="height: 38px;">
+                        <input type="text" placeholder="验证码" class="yanzhengma ipt"
+                            id="yanzhegma" name="yanzhengma" style="width: 290px;float: left;"><span class="s1"></span>
+                    </div>
                     <div class="sp">
                         <input type="checkbox"><label for="#">&nbsp;订阅优惠信息</label>
                     </div>
@@ -72,31 +77,32 @@
     <script src="../js/ajax.js"></script>
     <script src="../js/registr.js"></script>
     <script>
-        !function () {
-            let shoujihao = document.querySelector('.shoujihao');
-            let span = document.querySelectorAll('span')[5];
+         !function () {
+            let username = document.querySelector('.username');
+            let passworde=document.querySelector('.password');
+            let span = document.querySelectorAll('span')[1];
             let form1 = document.querySelector('.form1');
-            //console.log(span[5]);
-            let sjh = true;
-            shoujihao.onblur = function () {
+            let user = true;
+            username.onblur = function () {
+                let reg = /^[a-zA-Z0-9_-]{4,16}$/;
                 if (this.value != '') {
                     $ajax({
                         type: 'post',
                         url: 'http://localhost/JS2002/SMHYSC/php/registry.php',
                         data: {
-                            shoujihao: shoujihao.value//将数据传给后端
+                            username: username.value,//将数据传给后端
+                            password: passworde.value,
                         },
                         success: function (data) {//后端反值 1存在 空为不存在
-                            //let reg = /^1[3578]\d{9}$/;
                             if (data) {
-                                console.log(data);
-                                span.innerHTML = '手机号已存在';
-                                span.style.color = 'red';
-                                sjh = false;
-                            } else {
+                                console.log(username.value)
                                 span.innerHTML = '√';
                                 span.style.color = 'grenn';
-                                sjh = true;
+                                user = true;
+                            } else {
+                                span.innerHTML = '用户名已存在';
+                                span.style.color = 'red';
+                                user = false;
                             }
                         }
                     });
@@ -109,7 +115,7 @@
                 //判断用户名是否为空。
                 if (shoujihao.value === '') {
                     alert('请输入用户名');
-                    sjh = false;
+                    user = false;
                 }
                 if (!sjh) {
                     return false;

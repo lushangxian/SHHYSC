@@ -14,23 +14,23 @@
     }
     //test方法---字符串中查找是否存在指定的正则表达式并返回布尔值，
     //如果存在则返回 true，不存在则返回 false。
-    Input[0].onblur = function () {
-        let reg = /^[a-zA-Z0-9_-]{4,16}$/;//用户名正则
-        if (this.value !== '') {//大判断 假如input的value值不为空 执行下面
-            if (reg.test(this.value)) {//假如input的值有正则 输出
-                Span[1].innerHTML = '√';
-                Span[1].style.color = 'green';
-                this.yonghu = true;//赋值
-            } else {
-                Span[1].innerHTML = '请输入一个正确的用户名';
-                Span[1].style.color = 'red';
-                this.yonghu = false;
-            }
-        } else {
-            Span[1].innerHTML = '用户名不能为空';
-            Span[1].style.color = 'red';
-        }
-    }
+    // Input[0].onblur = function () {
+    //     let reg = /^[a-zA-Z0-9_-]{4,16}$/;//用户名正则
+    //     if (this.value !== '') {//大判断 假如input的value值不为空 执行下面
+    //         if (reg.test(this.value)) {//假如input的值有正则 输出
+    //             Span[1].innerHTML = '√';
+    //             Span[1].style.color = 'green';
+    //             this.yonghu = true;//赋值
+    //         } else {
+    //             Span[1].innerHTML = '请输入一个正确的用户名';
+    //             Span[1].style.color = 'red';
+    //             this.yonghu = false;
+    //         }
+    //     } else {
+    //         Span[1].innerHTML = '用户名不能为空';
+    //         Span[1].style.color = 'red';
+    //     }
+    // }
 
     //2--邮箱
     Input[1].onfocus = function () {
@@ -175,23 +175,23 @@
         Span[5].innerHTML = '请输入手机号';
         Span[5].style.color = '#999';
     }
-    // Input[4].onblur = function () {
-    //     let reg = /^1[3578]\d{9}$/;
-    //     if (this.value !== '') {
-    //         if (reg.test(this.value)) {
-    //             Span[5].innerHTML = '√';
-    //             Span[5].style.color = 'grenn';
-    //             sjh = true;
-    //         } else {
-    //             Span[5].innerHTML = '请输入正确的手机号';
-    //             Span[5].style.color = 'red';
-    //             sjh = false;
-    //         }
-    //     } else {
-    //         Span[5].innerHTML = '手机号不能为空';
-    //         Span[5].style.color = 'red';
-    //     }
-    // }
+    Input[4].onblur = function () {
+        let reg = /^1[3578]\d{9}$/;
+        if (this.value !== '') {
+            if (reg.test(this.value)) {
+                Span[5].innerHTML = '√';
+                Span[5].style.color = 'grenn';
+                sjh = true;
+            } else {
+                Span[5].innerHTML = '请输入正确的手机号';
+                Span[5].style.color = 'red';
+                sjh = false;
+            }
+        } else {
+            Span[5].innerHTML = '手机号不能为空';
+            Span[5].style.color = 'red';
+        }
+    }
 
     //随机数
     let s1 = document.querySelector('.s1');
